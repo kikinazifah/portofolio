@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-sans), "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", monospace;
+
+  --color-canvas: #FAF7EE;
+  --color-canvasSubtle: #F4EFE2;
+  --color-canvas-subtle: #F4EFE2;
+
+  --color-surface-card: #FFFFFF;
+  --color-surface-border: #EAE4D3;
+  --color-surface-subtle: #F5EFE1;
+  --color-surface-charcoal: #1F1D1B;
+
+  --color-warmText-main: #1F1D1B;
+  --color-warmText-muted: #635E59;
+  --color-warmText-light: #8C857D;
+  --color-warm-text-main: #1F1D1B;
+  --color-warm-text-muted: #635E59;
+  --color-warm-text-light: #8C857D;
+
+  --color-amberAccent-300: #FDE68A;
+  --color-amberAccent-400: #FCD34D;
+  --color-amberAccent-500: #F59E0B;
+  --color-amberAccent-600: #D97706;
+  --color-amberAccent-700: #B45309;
+
+  --color-pastelLilac: #DDD6FE;
+  --color-pastel-lilac: #DDD6FE;
+
+  --shadow-cream-soft: 0 10px 30px -8px rgba(100, 85, 60, 0.08), 0 2px 8px -2px rgba(100, 85, 60, 0.04);
+  --shadow-cream-hover: 0 20px 40px -12px rgba(100, 85, 60, 0.14), 0 4px 12px -2px rgba(100, 85, 60, 0.06);
+  --shadow-warm-glow: 0 0 35px -5px rgba(245, 158, 11, 0.25);
+  --shadow-dark-float: 0 20px 45px -10px rgba(15, 12, 10, 0.35);
+}
+
+.bg-grid-pattern {
+  background-image: radial-gradient(rgba(120, 105, 80, 0.1) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #1F1D1B 20%, #B45309 60%, #D97706 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.warm-card {
+  background: #FFFFFF;
+  border: 1px solid #EAE4D3;
+  box-shadow: 0 8px 25px -6px rgba(100, 85, 60, 0.06), 0 2px 6px -2px rgba(100, 85, 60, 0.03);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.warm-card:hover {
+  border-color: #D8CEB7;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -10px rgba(100, 85, 60, 0.12), 0 4px 12px -2px rgba(100, 85, 60, 0.05);
+}
+
+.progress-bar-glow {
+  box-shadow: 0 0 10px rgba(245, 158, 11, 0.35);
+}
+
+/* Typing cursor blink */
+@keyframes blink {
+
+  0%,
+  49% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 6px;
+  height: 1em;
+  background: currentColor;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+
+/* Glow lembut di border code card */
+@keyframes codeGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6),
+      0 0 0 1px rgba(168, 85, 247, 0.15);
+  }
+
+  50% {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6),
+      0 0 20px 2px rgba(168, 85, 247, 0.35);
+  }
+}
+
+.code-card-glow {
+  animation: codeGlow 4s ease-in-out infinite;
+}
+
+/* Live dot pulse */
+@keyframes livePulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7);
+  }
+
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 0 6px rgba(52, 211, 153, 0);
+  }
+}
+
+.live-dot {
+  animation: livePulse 2s ease-in-out infinite;
+}
+
+/* Fade-in per baris kode */
+@keyframes codeLine {
+  from {
+    opacity: 0;
+    transform: translateX(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.code-line {
+  opacity: 0;
+  animation: codeLine 0.4s ease-out forwards;
+}
