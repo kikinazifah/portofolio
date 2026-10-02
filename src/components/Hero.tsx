@@ -184,13 +184,20 @@ export default function Hero() {
                 className="
   code-card-glow
   absolute
-  bottom-10
-  -right-27
+  bottom-[-5px]
+  right-[-5px]
+
+  w-[285px]
+  scale-[0.72]
+  origin-bottom-right
+
   sm:bottom-10
   sm:-right-27
-  w-[210px]
   sm:w-[285px]
+  sm:scale-100
+
   lg:w-[320px]
+
   rounded-2xl
   bg-[#0d0f14]
   shadow-[0_20px_50px_rgba(0,0,0,0.35)]
