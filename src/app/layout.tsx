@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   title: "Hita | Software Engineer",
   description:
     "Software engineer portfolio showcasing modern web and mobile applications with React, Next.js, Flutter, and Laravel.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
