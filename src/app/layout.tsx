@@ -15,9 +15,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Hita | Full-stack Developer",
+  title: "Hita | Software Engineer",
   description:
-    "Developer portfolio showcasing modern web and mobile applications with React, Next.js, Flutter, and Laravel.",
+    "Software engineer portfolio showcasing modern web and mobile applications with React, Next.js, Flutter, and Laravel.",
 };
 
 export default function RootLayout({
