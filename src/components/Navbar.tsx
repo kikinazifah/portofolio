@@ -45,9 +45,9 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 backdrop-blur-xl border-b transition-all duration-300 ${scrolled
-          ? "bg-[#FAF7EE]/95 border-[#EAE4D3] shadow-sm"
-          : "bg-[#FAF7EE]/85 border-transparent"
+      className={`sticky top-0 z-50 w-full backdrop-blur-xl border-b transition-all duration-300 ${scrolled
+        ? "bg-[#FAF7EE]/95 border-[#EAE4D3] shadow-sm"
+        : "bg-[#FAF7EE]/85 border-transparent"
         }`}
     >
       {/* Navbar Container */}
@@ -126,8 +126,8 @@ export default function Navbar() {
                 href={link.href}
                 onClick={() => setActiveSection(link.id)}
                 className={`transition-colors duration-200 relative py-1 ${isActive
-                    ? "text-[#1F1D1B] font-semibold after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-amber-500 after:rounded-full"
-                    : "text-[#635E59] hover:text-[#1F1D1B]"
+                  ? "text-[#1F1D1B] font-semibold after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-amber-500 after:rounded-full"
+                  : "text-[#635E59] hover:text-[#1F1D1B]"
                   }`}
               >
                 {link.label}

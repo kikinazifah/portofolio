@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
 @theme {
   --font-sans: var(--font-sans), "Plus Jakarta Sans", system-ui, sans-serif;
   --font-mono: var(--font-mono), "JetBrains Mono", monospace;

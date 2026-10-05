@@ -33,8 +33,11 @@ export default function RootLayout({
       lang="en"
       className={`${plusJakartaSans.variable} ${jetbrainsMono.variable} scroll-smooth`}
     >
-      <body className="bg-canvas text-warmText-muted font-sans antialiased relative min-h-screen overflow-x-hidden selection:bg-amber-200 selection:text-warmText-main">
-        {children}
+      <body className="bg-canvas text-warmText-muted font-sans antialiased selection:bg-amber-200 selection:text-warmText-main">
+        {/* Wrapper yang nahan overflow — body sendiri jangan di-overflow-hidden */}
+        <div className="relative w-full overflow-x-clip">
+          {children}
+        </div>
       </body>
     </html>
   );
