@@ -57,7 +57,10 @@ export default function Hero() {
   ];
 
   return (
-    <section className="min-h-screen flex items-center max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-0 overflow-visible" id="hero">
+    <section
+      className="min-h-screen flex items-center max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-0 overflow-visible"
+      id="hero"
+    >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center w-full">
         {/* Hero Text */}
         <div className="lg:col-span-6 space-y-6">
@@ -72,9 +75,7 @@ export default function Hero() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1F1D1B] tracking-tight leading-[1.12]">
               Turning Ideas into
               <br />
-              <span className="text-gradient">
-                Seamless Digital
-              </span>
+              <span className="text-gradient">Seamless Digital</span>
               <br />
               Experiences.
             </h1>
@@ -87,7 +88,15 @@ export default function Hero() {
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-white bg-[#1F1D1B] hover:bg-neutral-800 shadow-md shadow-stone-800/15 hover:shadow-stone-800/25 hover:-translate-y-0.5 transition-all duration-200"
               >
                 Projects
-                <svg className="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.3" viewBox="0 0 24 24">
+                <svg
+                  className="w-4 h-4 text-amber-400"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2.3"
+                  viewBox="0 0 24 24"
+                >
                   <line x1="7" x2="17" y1="17" y2="7" />
                   <polyline points="7 7 17 7 17 17" />
                 </svg>
@@ -134,19 +143,19 @@ export default function Hero() {
           </Reveal>
         </div>
 
-        {/* Hero Visual (Large Photo & Code Card) */}
+        {/* Hero Visual */}
         <div className="lg:col-span-6 relative flex justify-center items-center py-6 sm:py-10">
           <Reveal direction="left" delay={200} className="w-full flex justify-center">
-            <div className="relative w-full max-w-[420px] sm:max-w-[500px] lg:max-w-[560px] xl:max-w-[600px] h-[500px] sm:h-[580px] lg:h-[650px] xl:h-[680px] flex items-end justify-center">
+            <div className="relative w-full max-w-[340px] sm:max-w-[460px] lg:max-w-[520px] xl:max-w-[600px] h-[460px] sm:h-[580px] lg:h-[650px] xl:h-[680px] flex items-end justify-center">
 
-              {/* Dot Grid Pattern (Top-Right) */}
+              {/* Dot Grid Pattern (Top-Right) — sembunyikan di mobile biar nggak overflow */}
               <div className="absolute top-2 right-4 sm:right-8 grid grid-cols-6 gap-2.5 opacity-30 pointer-events-none z-0">
                 {Array.from({ length: 30 }).map((_, i) => (
                   <div key={i} className="w-1.5 h-1.5 rounded-full bg-stone-500/60" />
                 ))}
               </div>
 
-              {/* Hand-drawn swirl arrow on left */}
+              {/* Hand-drawn swirl arrow */}
               <div className="absolute bottom-32 -left-3 sm:-left-8 z-20 pointer-events-none hidden sm:block">
                 <svg
                   className="w-16 h-16 sm:w-20 sm:h-20 text-stone-500/70"
@@ -162,51 +171,49 @@ export default function Hero() {
                 </svg>
               </div>
 
-              {/* Backdrop Circle (Warna pastel lilac / purple / amber seperti sebelumnya) */}
-              <div className="absolute top-8 sm:top-10 left-1/2 -translate-x-1/2 w-[330px] h-[330px] sm:w-[410px] sm:h-[410px] lg:w-[480px] lg:h-[480px] xl:w-[520px] xl:h-[520px] rounded-full bg-gradient-to-tr from-violet-300/80 via-purple-200/70 to-amber-200/90 shadow-[0_0_70px_rgba(167,139,250,0.5)] z-0" />
+              {/* Backdrop Circle — dikecilkan di mobile biar nggak overflow */}
+              <div className="absolute top-8 sm:top-10 left-1/2 -translate-x-1/2 w-[280px] h-[280px] sm:w-[410px] sm:h-[410px] lg:w-[480px] lg:h-[480px] xl:w-[520px] xl:h-[520px] rounded-full bg-gradient-to-tr from-violet-300/80 via-purple-200/70 to-amber-200/90 shadow-[0_0_70px_rgba(167,139,250,0.5)] z-0" />
 
-              {/* Big Transparent Photo of Hita */}
+              {/* Big Photo */}
               <div className="relative z-10 w-full h-full flex items-end justify-center overflow-visible">
                 <Image
                   src="/gemes.png"
                   alt="Fakhitah Nazifah"
                   fill
-                  sizes="(max-width: 640px) 420px, (max-width: 1024px) 500px, 600px"
+                  sizes="(max-width: 640px) 340px, (max-width: 1024px) 460px, 600px"
                   className="object-contain object-bottom scale-105 select-none pointer-events-none drop-shadow-[0_20px_35px_rgba(0,0,0,0.2)]"
                   priority
                 />
               </div>
 
-              {/* Code Snippet Box (Ukuran pas dengan konten & header seperti sebelumnya) */}
               {/* Code Snippet Box */}
               <aside
                 aria-label="Interactive Code Snippet"
                 className="
-  code-card-glow
-  absolute
-  bottom-[-5px]
-  right-[-5px]
+                  code-card-glow
+                  absolute
+                  bottom-[-5px]
+                  right-[-5px]
+                  w-[285px]
+                  scale-[0.72]
+                  origin-bottom-right
 
-  w-[285px]
-  scale-[0.72]
-  origin-bottom-right
+                  sm:bottom-10
+                  sm:-right-24
+                  sm:w-[285px]
+                  sm:scale-100
 
-  sm:bottom-10
-  sm:-right-27
-  sm:w-[285px]
-  sm:scale-100
+                  lg:w-[320px]
 
-  lg:w-[320px]
-
-  rounded-2xl
-  bg-[#0d0f14]
-  shadow-[0_20px_50px_rgba(0,0,0,0.35)]
-  border border-stone-700/60
-  overflow-hidden
-  text-[10px]
-  font-mono
-  z-30
-"
+                  rounded-2xl
+                  bg-[#0d0f14]
+                  shadow-[0_20px_50px_rgba(0,0,0,0.35)]
+                  border border-stone-700/60
+                  overflow-hidden
+                  text-[10px]
+                  font-mono
+                  z-30
+                "
               >
                 {/* Window Header */}
                 <div className="flex items-center justify-between px-2.5 py-2 border-b border-stone-700/60 bg-[#111319]">
@@ -227,7 +234,6 @@ export default function Hero() {
 
                 {/* Code */}
                 <div className="px-3.5 py-3 text-[8px] sm:text-[9px] leading-relaxed">
-
                   <div className="code-line">
                     <span className="text-purple-400">import</span>{" "}
                     {"{ "}
@@ -236,7 +242,8 @@ export default function Hero() {
                     <span className="text-purple-400">from</span>{" "}
                     <span className="text-emerald-300">
                       &apos;@hita/core&apos;
-                    </span>;
+                    </span>
+                    ;
                   </div>
 
                   <div className="mt-2 code-line">
@@ -250,13 +257,15 @@ export default function Hero() {
                     <span className="text-stone-500">name:</span>{" "}
                     <span className="text-amber-300">
                       &apos;Fakhitah Nazifah&apos;
-                    </span>,
+                    </span>
+                    ,
                   </div>
                   <div className="code-line pl-5">
                     <span className="text-stone-500">role:</span>{" "}
                     <span className="text-amber-300">
                       &apos;Software Engineer&apos;
-                    </span>,
+                    </span>
+                    ,
                   </div>
                   <div className="code-line pl-5">
                     <span className="text-stone-500">focus:</span> [
@@ -264,13 +273,9 @@ export default function Hero() {
                       &apos;Frontend Modern&apos;
                     </span>
                     ,{" "}
-                    <span className="text-emerald-300">
-                      &apos;Clean UI&apos;
-                    </span>
+                    <span className="text-emerald-300">&apos;Clean UI&apos;</span>
                     ,{" "}
-                    <span className="text-emerald-300">
-                      &apos;Fast UX&apos;
-                    </span>
+                    <span className="text-emerald-300">&apos;Fast UX&apos;</span>
                     ],
                   </div>
                   <div className="code-line pl-5">
@@ -319,9 +324,7 @@ export default function Hero() {
                       Compiled successfully in 42ms
                     </span>
                   </div>
-                  <span className="text-stone-500 text-[8px]">
-                    v2.5.0
-                  </span>
+                  <span className="text-stone-500 text-[8px]">v2.5.0</span>
                 </div>
               </aside>
             </div>
